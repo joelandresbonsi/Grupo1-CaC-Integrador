@@ -5,10 +5,10 @@ const productosSec = document.querySelector(".row");
 const btnTinto = document.querySelector("#Tinto");
 const btnRosado = document.querySelector("#Rosado");
 const btnBlanco = document.querySelector("#Blanco");
+const btnAll = document.querySelector("#all");
 const div = document.createElement("div");
 
 window.addEventListener("DOMContentLoaded", () => {
-  // btnBlanco.addEventListener("click", loadData);
   loadData();
 });
 
@@ -17,7 +17,30 @@ const url = "data1.json";
 function loadData() {
   fetch(url)
     .then((response) => response.json())
-    .then((data) => addToPage(data));
+    .then((data) => filtrar(data));
+}
+
+function filtrar(arr) {
+  let mostrarTinto = arr.filter((prod) => prod.category === "tinto");
+  let mostrarBlanco = arr.filter((prod) => prod.category === "blanco");
+  let mostrarRosado = arr.filter((prod) => prod.category === "rosado");
+  let mostrarTodo = arr;
+
+  btnAll.addEventListener("click", () => {
+    addToPage(mostrarTodo);
+  });
+
+  btnTinto.addEventListener("click", () => {
+    addToPage(mostrarTinto);
+  });
+
+  btnBlanco.addEventListener("click", () => {
+    addToPage(mostrarBlanco);
+  });
+
+  btnRosado.addEventListener("click", () => {
+    addToPage(mostrarRosado);
+  });
 }
 
 //filtro el tipo de vino dependiendo del boton apretado
