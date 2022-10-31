@@ -1,6 +1,7 @@
 body {
   background-image: url('../img/photo-1577996947118-d820138a697e.avif');
   background-size: contain;
+  background-position: left;
   background-repeat: no-repeat;
 }
 

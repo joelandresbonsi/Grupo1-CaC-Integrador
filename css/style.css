@@ -4,7 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body {
+    background-image: url('../img/photo-1577996947118-d820138a697e.avif');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
 p{
     color: white;
