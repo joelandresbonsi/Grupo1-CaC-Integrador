@@ -1,10 +1,9 @@
 body {
-  background-image: url('../img/photo-1577996947118-d820138a697e.avif');
+  background-image: url("../img/photo-1577996947118-d820138a697e.avif");
   background-size: contain;
   background-position: left;
   background-repeat: no-repeat;
 }
-
 
 .contacto {
   color: rgb(252, 252, 252);
@@ -48,4 +47,10 @@ input:hover {
     width: 50%;
     max-width: 900px !important;
   }
+}
+
+/* styles for the about us section */
+.about {
+  background-color: black;
+  color: white;
 }

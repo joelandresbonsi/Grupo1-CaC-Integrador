@@ -6,7 +6,6 @@ const btnTinto = document.querySelector("#Tinto");
 const btnRosado = document.querySelector("#Rosado");
 const btnBlanco = document.querySelector("#Blanco");
 const btnAll = document.querySelector("#all");
-const div = document.createElement("div");
 
 window.addEventListener("DOMContentLoaded", () => {
   loadData();
@@ -19,7 +18,7 @@ function loadData() {
     .then((response) => response.json())
     .then((data) => filtrar(data));
 }
-
+//filtro el tipo de vino dependiendo del botón apretado
 function filtrar(arr) {
   let mostrarTinto = arr.filter((prod) => prod.category === "tinto");
   let mostrarBlanco = arr.filter((prod) => prod.category === "blanco");
@@ -43,12 +42,9 @@ function filtrar(arr) {
   });
 }
 
-//filtro el tipo de vino dependiendo del boton apretado
-
-//agrego los productos de forma dinamica haciendo uso de la info obtenida del json
+//agrego los productos de forma dinámica haciendo uso de la info obtenida del json
 function addToPage(arr) {
   arr.forEach((element) => {
-    /*  console.log(element, "sdasds"); */
     const card = document.createElement("div");
     card.className = "card-bts col col-md-4 col-lg-4 mt-4 mb-2";
     card.innerHTML = `
