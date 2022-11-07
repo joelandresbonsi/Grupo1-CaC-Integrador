@@ -26,7 +26,10 @@ function filtrar(arr) {
   let mostrarTodo = arr;
 
   btnAll.addEventListener("click", () => {
-    addToPage(mostrarTodo);
+    location.reload();
+    window.addEventListener("DOMContentLoaded", () => {
+      addToPage(mostrarTodo);
+    });
   });
 
   btnTinto.addEventListener("click", () => {
