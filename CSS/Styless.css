@@ -1,7 +1,6 @@
 body {
-  background-image: url("../img/photo-1577996947118-d820138a697e.avif");
-  background-size: contain;
-  background-position: left;
+  background-image: url("../img/jonathan-borba-Y14s2hZKMQQ-unsplash.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -53,4 +52,14 @@ input:hover {
 .about {
   background-color: black;
   color: white;
+}
+
+/* styles for productos header  */
+.productos-header {
+  color: white;
+}
+
+.btn {
+  color: white;
+  background-color: black;
 }
