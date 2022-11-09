@@ -6,6 +6,7 @@ const btnTinto = document.querySelector("#Tinto");
 const btnRosado = document.querySelector("#Rosado");
 const btnBlanco = document.querySelector("#Blanco");
 const btnAll = document.querySelector("#all");
+const agregar = document.querySelectorAll("#agregar");
 
 window.addEventListener("DOMContentLoaded", () => {
   loadData();
@@ -24,11 +25,12 @@ function filtrar(arr) {
   let mostrarBlanco = arr.filter((prod) => prod.category === "blanco");
   let mostrarRosado = arr.filter((prod) => prod.category === "rosado");
   let mostrarTodo = arr;
+  addToPage(mostrarTodo);
 
-  btnAll.addEventListener("click", () => {
+  /*  btnAll.addEventListener("click", () => {
     addToPage(mostrarTodo);
   });
-
+ */
   btnTinto.addEventListener("click", () => {
     addToPage(mostrarTinto);
   });
@@ -55,7 +57,7 @@ function addToPage(arr) {
           <p class="card-text">${element.description}</p>
           <p class="card-text">Precio:$${element.price}</p>
           <p class="card-text">Tipo de vino: ${element.category}</p>
-          <button type="button" class="btn btn-dark">Agregar al carrito</button>
+          <button type="button" id="agregar" class="btn btn-dark">Agregar al carrito</button>
         </div>
       </div>
   
@@ -63,3 +65,11 @@ function addToPage(arr) {
     productosSec.append(card);
   });
 }
+
+//agregamos los productos al local storage cuando se pone agregar al carrito
+/* agregar.addEventListener("click", (e) => {
+  const prodc = e.target;
+  console.log(prodc);
+  localStorage.setItem(prodc);
+});
+ */
