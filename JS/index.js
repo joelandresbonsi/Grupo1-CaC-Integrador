@@ -55,7 +55,7 @@ function addToPage(arr) {
           <p class="card-text">${element.description}</p>
           <p class="card-text">Precio:$${element.price}</p>
           <p class="card-text">Tipo de vino: ${element.category}</p>
-          <button type="button" class="btn btn-primary">Agregar al carrito</button>
+          <button type="button" class="btn btn-dark">Agregar al carrito</button>
         </div>
       </div>
   
