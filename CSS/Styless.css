@@ -54,6 +54,10 @@ input:hover {
   color: white;
 }
 
+.about-text{
+  margin-left: 0.5vw;
+}
+
 /* styles for productos header  */
 .productos-header {
   color: white;
