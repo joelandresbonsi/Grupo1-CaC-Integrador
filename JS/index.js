@@ -7,6 +7,7 @@ const btnRosado = document.querySelector("#Rosado");
 const btnBlanco = document.querySelector("#Blanco");
 const btnAll = document.querySelector("#all");
 const agregar = document.querySelectorAll("#agregar");
+const productosCard = document.querySelector("#productos-card");
 
 window.addEventListener("DOMContentLoaded", () => {
   loadData();
@@ -27,19 +28,23 @@ function filtrar(arr) {
   let mostrarTodo = arr;
   addToPage(mostrarTodo);
 
-  /*  btnAll.addEventListener("click", () => {
+  btnAll.addEventListener("click", () => {
+    limpiarHtml();
     addToPage(mostrarTodo);
   });
- */
+
   btnTinto.addEventListener("click", () => {
+    limpiarHtml();
     addToPage(mostrarTinto);
   });
 
   btnBlanco.addEventListener("click", () => {
+    limpiarHtml();
     addToPage(mostrarBlanco);
   });
 
   btnRosado.addEventListener("click", () => {
+    limpiarHtml();
     addToPage(mostrarRosado);
   });
 }
@@ -64,6 +69,13 @@ function addToPage(arr) {
     `;
     productosSec.append(card);
   });
+}
+
+//funcion encargada de limpiar las cards de los productos para filtrar bien
+function limpiarHtml() {
+  while (productosCard.firstChild) {
+    productosCard.removeChild(productosCard.firstChild);
+  }
 }
 
 //agregamos los productos al local storage cuando se pone agregar al carrito
