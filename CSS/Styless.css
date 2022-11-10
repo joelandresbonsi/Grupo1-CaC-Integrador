@@ -2,6 +2,7 @@ body {
   background-image: url("../img/jonathan-borba-Y14s2hZKMQQ-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
 .contacto {
