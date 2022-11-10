@@ -63,3 +63,8 @@ input:hover {
   color: white;
   background-color: black;
 }
+
+/*styles for contact section*/
+#body-contacto{
+  min-height: 60vh;
+}
