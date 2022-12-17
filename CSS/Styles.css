@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: url("../img/jonathan-borba-Y14s2hZKMQQ-unsplash.jpg");
   background-size: cover;
