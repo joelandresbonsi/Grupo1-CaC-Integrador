@@ -80,49 +80,50 @@
         </nav>
       </header>
 <main>
-    <section class="contacto mb-4 ">
+    <section class="registro-forma mt-4">
         <div class="row">
           <div class="col-md-12 col-sm-12">
-          <form action="post" class="back">
+          <form action="post" class="back" id="register">
             <input
               type="text"
               class="form-control mb-2"
-              name=""
-              id=""
+              name="Nombre"
+              id="name-form"
               placeholder="Nombre"
             />
 
             <input
               type="text"
               class="form-control mb-2"
-              name=""
-              id=""
+              name="Apellido"
+              id="surname-form"
               placeholder="Apellido"
             />
             <input
               type="email"
               class="form-control mb-2"
-              name=""
-              id=""
+              name="email"
+              id="mail-form"
               placeholder="Usuario, Registrate con tu mail"
               onchange="none"
             />
             <input
               type="password"
               class="form-control mb-2"
-              name=""
-              id=""
+              name="pass"
+              id="registerPass"
               placeholder="Contraseña"
             />
             <input
             type="password"
             class="form-control mb-2"
-            name=""
-            id=""
+            name="repeatPass"
+            id="repeat-password"
             placeholder="Repite tu Contraseña"
           />
+          <small id="confirmPassword-feedback" style="color: yellow;"></small>
             
-            <button type="button" class="btn btn-dark enviar">
+            <button type="button" class="btn btn-dark enviar" id="enviar-registro">
               Registrarse
             </button>
         </div>
@@ -130,6 +131,6 @@
         </div>
       </section>
 </main>
-
+    <script src="/JS/registro.js"></script>
   </body>
 </html>
