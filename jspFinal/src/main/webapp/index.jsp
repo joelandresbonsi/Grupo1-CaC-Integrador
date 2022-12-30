@@ -80,7 +80,7 @@
 			           
 
             <li class="nav-item me-4">
-              <a class="nav-link" href="carrito.html"><img src="./img/carrito-de-compras-blanco.png"
+              <a class="nav-link" href="./carrito.jsp"><img src="./img/carrito-de-compras-blanco.png"
                   alt="Carrito de compras" width="35" height="35" /></a>
             </li>
           </ul>
