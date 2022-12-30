@@ -10,6 +10,8 @@ const agregar = document.querySelector("#agregar");
 const productosCard = document.querySelector("#productos-card");
 const sortUp = document.querySelector("#sort-up");
 const sortDown = document.querySelector("#sort-down");
+const addToCart = 0;
+const productosCarro = document.querySelector("productos-carro");
 const carrito = [];
 let total = 0;
 
@@ -30,11 +32,7 @@ function filtrar(arr) {
   let mostrarBlanco = arr.filter((prod) => prod.category === "blanco");
   let mostrarRosado = arr.filter((prod) => prod.category === "rosado");
   let mostrarTodo = arr;
-  let seleccionado = arr.find((prod) => prod.id);
-  let producto = arr.find((prod) => prod.id == seleccionado);
   addToPage(mostrarTodo);
-
-  sortUp.addEventListener("click", () => {});
 
   btnAll.addEventListener("click", () => {
     limpiarHtml();
@@ -55,11 +53,6 @@ function filtrar(arr) {
     limpiarHtml();
     addToPage(mostrarRosado);
   });
-
-  function manejadorCompra() {
-    carrito.push(producto);
-    salida(carrito);
-  }
 }
 
 //agrego los productos de forma dinámica haciendo uso de la info obtenida del json
@@ -75,7 +68,7 @@ function addToPage(arr) {
           <p class="card-text">${element.description}</p>
           <p class="card-text">Precio:$${element.price}</p>
           <p class="card-text">Tipo de vino: ${element.category}</p>
-          <button type="button" onclick="manejadorCompra" id=${element.id} class="btn btn-dark">Agregar al carrito</button>
+          <button type="button" id=${element.id} class="btn btn-dark">Agregar al carrito</button>
         </div>
       </div>
   
@@ -88,39 +81,5 @@ function addToPage(arr) {
 function limpiarHtml() {
   while (productosCard.firstChild) {
     productosCard.removeChild(productosCard.firstChild);
-  }
-}
-
-//funcion encargada de sortear por precio de menor a mayor
-function sortUpFunc(a, b) {
-  return parseFloat(a) - parseFloat(b);
-}
-
-//agregamos los productos al local storage cuando se pone agregar al carrito
-function salida(carrito) {
-  let myInner = "";
-  //USAMOS LA VARIABLE AUXILIAR J PARA COLOCARLE AL PADRE, AL BOTON Y AL INPUT.
-  let j = 0;
-  for (const producto of carrito) {
-    //LE PONEMOS UN ID AL PRODUCTO, PARA DESPUES PODER BORRARLO EN EL ARRAY
-    //AL BUTTON TAMBIEN LE PONEMOS UN ID CORRESPONDIENTE.
-    myInner += `<div id = producto${j} class="card mb-3" style="max-width: 540px;"> 
-    <div class="row no-gutters">
-      <div class="col-md-4">
-      <div class="card-image">
-        <img src=${producto.img} class="img-fluid w-100" alt="...">
-        </div>
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title title">Product name: ${producto.name}</h5>
-          <p class="card-text card-price cards-price">Product price:$${producto.price}</p>
-          <p class="card-text card-price-total">Total price:$${total}</p>
-          <button type="button" id="btnRemove${j}" class="btn btn-danger">Remove product</button>
-        </div>
-      </div>
-    </div>
-  </div> `;
-    j++;
   }
 }

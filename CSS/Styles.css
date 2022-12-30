@@ -1,11 +1,84 @@
 html {
   scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  background-image: url("../img/jonathan-borba-Y14s2hZKMQQ-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    to right bottom,
+    #081a35,
+    #0b172c,
+    #0c1324,
+    #0b0e1c,
+    #070914
+  );
+}
+
+.navbar {
+  color: transparent;
+  position: absolute;
+  z-index: 1000;
+}
+.winery {
+  position: relative;
+  text-align: center;
+  color: white;
+  transition: transform 5s;
+}
+.winery:hover {
+  transform: scale(102%);
+}
+
+@media only screen and (min-width: 800px) {
+  .tit-primario {
+    color: #fffaed;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: "Dancing Script", cursive;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .tit-primario {
+    color: #fffaed;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: "Dancing Script", cursive;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .tit-secundario {
+    color: #fffffe;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    border-bottom: 3px double #fffbee;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .tit-secundario {
+    color: #fffffe;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    border-bottom: 3px double #fffbee;
+  }
 }
 
 .contacto {
@@ -54,7 +127,7 @@ input:hover {
 
 /* styles for the about us section */
 .about {
-  background-color: black;
+  background-color: rgb(20, 26, 45);
   color: white;
 }
 
@@ -66,4 +139,19 @@ input:hover {
 .btn {
   color: white;
   background-color: black;
+}
+.variedades {
+  position: relative;
+}
+
+.footer {
+  background-color: rgb(11, 15, 29);
+  color: white;
+}
+
+.fa-brands {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-size: xx-large;
+  color: white;
 }
